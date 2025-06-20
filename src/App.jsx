@@ -9,9 +9,6 @@ const App = () => {
 
   const [navVisibility, setNavVisiblity] = useState(false)
 
-  
-
-  // Check login token and update state before rendering
   const tokenLogin = localStorage.getItem("tokenLogin");
   if (tokenLogin && !navVisibility) {
     setNavVisiblity(true);
