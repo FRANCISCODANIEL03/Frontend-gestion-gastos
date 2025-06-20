@@ -18,7 +18,8 @@ const App = () => {
   return (
     <>
       <div className="flex w-full h-full max-md:flex-col">
-        {navVisibility && (<div className="flex md:flex-col md:h-screen pt-15 px-5 bg-slate-200 md:justify-between">
+        {navVisibility && (<div className="flex md:flex-col md:h-screen pt-15 px-5
+         bg-slate-200 md:justify-between">
           <div className="max-md:flex max-md:text-xl">
             <NavLi setHook={() => setRuta("/")}>
               <ChartNetwork className="mr-2" /> Dashboard

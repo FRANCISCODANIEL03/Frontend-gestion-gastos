@@ -15,3 +15,4 @@ const CartIn = ({ children, cantidad, name, color }) => {
 }
 
 export default CartIn
+

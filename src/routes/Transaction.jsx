@@ -106,31 +106,41 @@ const Transaction = () => {
     <div className='flex flex-col items-center h-screen'>
       <div className='p-3 bg-gray-600 text-center text-white text-3xl font-bold w-full'>Transactions</div>
       <div className='w-full flex'>
-        <form onSubmit={buttonSubmit} className='flex flex-col items-end shadow-2xl w-5/12 p-8 px-30 rounded-2xl m-10'>
+        <form onSubmit={buttonSubmit} className='flex flex-col items-end shadow-2xl w-5/12 p-8 px-30 
+        rounded-2xl m-10'>
           <div className='flex flex-col w-full'>
             <label className='text-slate-700 text-md font-bold text-2xl'>Descripción</label>
-            <textarea value={description} onChange={e => setDescription(e.target.value)} rows={4} placeholder='Realizar mantenimiento' className='border-3 border-slate-300 rounded-lg shadow-md focus:outline-none focus:border-slate-400 w-full my-2 px-4'></textarea>
+            <textarea value={description} onChange={e => setDescription(e.target.value)} rows={4} 
+            placeholder='Realizar mantenimiento' className='border-3 border-slate-300 rounded-lg 
+            shadow-md focus:outline-none focus:border-slate-400 w-full my-2 px-4'></textarea>
           </div>
           <div className='flex flex-col w-full'>
             <label className='text-slate-700 text-md font-bold text-2xl w-full'>Monto</label>
-            <input type="number" value={amount} onChange={e => setAmount(e.target.value)} placeholder='2000' className='border-3 border-slate-300 rounded-lg shadow-md focus:outline-none focus:border-slate-400 w-full my-2 p-1.5' />
+            <input type="number" value={amount} onChange={e => setAmount(e.target.value)} placeholder='2000' 
+            className='border-3 border-slate-300 rounded-lg shadow-md focus:outline-none
+             focus:border-slate-400 w-full my-2 p-1.5' />
           </div>
           <div className='flex flex-col w-full'>
             <label className='text-slate-700 text-md font-bold text-2xl'>Tipo</label>
-            <select value={type} onChange={e => setType(e.target.value)} className='border-3 border-slate-300 rounded-lg shadow-md focus:outline-none focus:border-slate-400 w-full my-2 p-1.5'>
+            <select value={type} onChange={e => setType(e.target.value)} className='border-3
+             border-slate-300 rounded-lg shadow-md focus:outline-none focus:border-slate-400 
+             w-full my-2 p-1.5'>
               <option value="ingreso">Ingreso</option>
               <option value="egreso">Egreso</option>
             </select>
           </div>
           <div className='flex flex-col w-full'>
             <label className='text-slate-700 text-md font-bold text-2xl'>Categoría</label>
-            <select value={category} onChange={e => setCategory(e.target.value)} className='border-3 border-slate-300 rounded-lg shadow-md focus:outline-none focus:border-slate-400 w-full my-2 p-1.5'>
+            <select value={category} onChange={e => setCategory(e.target.value)} className='border-3
+             border-slate-300 rounded-lg shadow-md focus:outline-none focus:border-slate-400 w-full
+              my-2 p-1.5'>
               {categories.map(cat => (
                 <option key={cat._id} value={cat._id}>{cat.name}</option>
               ))}
             </select>
           </div>
-          <button className='bg-slate-700 text-white px-6 py-2 my-4 rounded cursor-pointer hover:bg-blue-900'>Agregar</button>
+          <button className='bg-slate-700 text-white px-6 py-2 my-4 rounded cursor-pointer
+           hover:bg-blue-900'>Agregar</button>
           <p className='w-full text-center text-sm text-gray-400'>Ingresa un movimiento nuevo</p>
         </form>
         <div className='w-5/12'>
@@ -140,7 +150,8 @@ const Transaction = () => {
               placeholder='Buscar...'
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className='border-3 border-slate-300 rounded-lg shadow-md focus:outline-none focus:border-slate-400 my-2 p-1.5'
+              className='border-3 border-slate-300 rounded-lg shadow-md focus:outline-none
+               focus:border-slate-400 my-2 p-1.5'
             />
           </form>
           <ul className='h-130 overflow-y-auto px-3 rounded-2xl'>

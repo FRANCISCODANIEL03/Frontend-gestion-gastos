@@ -1,6 +1,4 @@
 import { ArrowDownToLine, ArrowUpToLine } from 'lucide-react'
-import { formatDistanceToNow } from 'date-fns'
-import { es } from 'date-fns/locale'
 
 const TransactionItem = ({ transaction, formatearMoneda, destacado }) => {
   const color = transaction.type === "ingreso" ? "green-300" : "red-600"
@@ -11,7 +9,8 @@ const TransactionItem = ({ transaction, formatearMoneda, destacado }) => {
   const minutos = Math.round((fecha - now) / (1000 * 60))
 
   return (
-    <li className={`bg-white p-4 rounded-3xl shadow-2xl w-full flex justify-between mb-5 ${destacado ? 'border-4 border-yellow-400' : ''}`}>
+    <li className={`bg-white p-4 rounded-3xl shadow-2xl w-full flex justify-between mb-5 ${destacado ? 
+    'border-4 border-yellow-400' : ''}`}>
       <div className='flex'>
         <div className={`p-4 text-${color}`}>
           {transaction.type === "ingreso" ? <ArrowUpToLine /> : <ArrowDownToLine />}
@@ -30,3 +29,5 @@ const TransactionItem = ({ transaction, formatearMoneda, destacado }) => {
 }
 
 export default TransactionItem
+
+

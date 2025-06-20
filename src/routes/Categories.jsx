@@ -61,7 +61,8 @@ const Categories = () => {
   return (
     <div className='flex flex-col items-center h-screen'>
       <div className='p-3 bg-gray-600 text-center text-white text-3xl font-bold w-full'>Categories</div>
-      <form onSubmit={buttonSubmit} className='flex flex-col items-end shadow-2xl w-fit p-10 h-4/12 my-5 rounded-2xl'>
+      <form onSubmit={buttonSubmit} className='flex flex-col items-end shadow-2xl w-fit p-10 h-4/12 my-5 
+      rounded-2xl'>
         <div className='flex flex-col'>
           <label className='text-slate-700 text-md font-bold text-2xl'>Nombre de la categoria</label>
           <input
@@ -69,16 +70,19 @@ const Categories = () => {
             value={nombre}
             onChange={(e) => setNombre(e.target.value)}
             placeholder='Tareas'
-            className='border-3 border-slate-300 rounded-lg shadow-md focus:outline-none focus:border-slate-400 w-full my-2 p-1.5'
+            className='border-3 border-slate-300 rounded-lg shadow-md focus:outline-none
+             focus:border-slate-400 w-full my-2 p-1.5'
           />
         </div>
-        <button type='submit' className='bg-slate-700 text-white px-4 py-1 my-4 rounded cursor-pointer hover:bg-blue-900'>Agregar</button>
+        <button type='submit' className='bg-slate-700 text-white px-4 py-1 my-4 rounded cursor-pointer
+         hover:bg-blue-900'>Agregar</button>
         <p className='w-full text-center text-sm text-gray-400'>Ingresa una categoria nueva</p>
       </form>
       <ul className='shadow-2xl bg-gray-50 w-8/10 p-2 rounded-2xl h-auto overflow-y-auto mb-5'>
         {categorias.length > 0 ? (
           categorias.map(cat => (
-            <li key={cat._id} className='w-full px-2 border-b-3 my-2 border-b-slate-900 text-xl text-slate-900'>
+            <li key={cat._id} className='w-full px-2 border-b-3 my-2 border-b-slate-900 text-xl
+             text-slate-900'>
               {cat.name}
             </li>
           ))
@@ -91,3 +95,5 @@ const Categories = () => {
 }
 
 export default Categories
+
+

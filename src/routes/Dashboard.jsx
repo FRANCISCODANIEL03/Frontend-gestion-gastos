@@ -89,7 +89,6 @@ const Dashboard = () => {
                     <h2 className='text-2xl text-center text-white p-2 mb-3'>Últimos 6 Movimientos</h2>
                     <ul className='h-80 overflow-y-auto'>
                         {
-                            
                             transactions.slice(0, 6).map((item, index) => (
                                 <TransactionItem
                                     transaction={item}
@@ -106,3 +105,4 @@ const Dashboard = () => {
 }
 
 export default Dashboard
+

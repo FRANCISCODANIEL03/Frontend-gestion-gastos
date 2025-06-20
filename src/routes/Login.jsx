@@ -76,20 +76,27 @@ const Login = ({ setNavVisiblity, setRuta }) => {
           <div className='flex flex-col w-full items-start gap-3 my-2'>
             <div className='w-full flex flex-col'>
               <label className='text-slate-700 text-md font-bold'>Correo electronico</label>
-              <input type="text" value={email} onChange={e => setEmail(e.target.value)} required className='border-3 border-slate-300 rounded-lg shadow-md focus:outline-none focus:border-slate-600 w-9/12 p-1.5' />
+              <input type="text" value={email} onChange={e => setEmail(e.target.value)} required 
+              className='border-3 border-slate-300 rounded-lg shadow-md focus:outline-none
+               focus:border-slate-600 w-9/12 p-1.5' />
             </div>
             <div className='w-full flex flex-col'>
               <label className='text-slate-700 text-md font-bold'>Contraseña</label>
-              <input type="password" value={password} onChange={e => setPassword(e.target.value)} required className='border-3 border-slate-300 rounded-lg shadow-md focus:outline-none focus:border-slate-600 w-9/12 p-1.5' />
+              <input type="password" value={password} onChange={e => setPassword(e.target.value)} required 
+              className='border-3 border-slate-300 rounded-lg shadow-md focus:outline-none
+               focus:border-slate-600 w-9/12 p-1.5' />
             </div>
             {isRegister && (
               <div className='w-full flex flex-col'>
                 <label className='text-slate-700 text-md font-bold'>Confirmar Contraseña</label>
-                <input type="password" value={confirmPassword} onChange={e => setConfirmPassword(e.target.value)} required className='border-3 border-slate-300 rounded-lg shadow-md focus:outline-none focus:border-slate-600 w-9/12 p-1.5' />
+                <input type="password" value={confirmPassword} onChange={e => setConfirmPassword(e.target.value)}
+                 required className='border-3 border-slate-300 rounded-lg shadow-md focus:outline-none
+                  focus:border-slate-600 w-9/12 p-1.5' />
               </div>
             )}
           </div>
-          <button type='submit' className='bg-emerald-500 w-4/12 p-2 text-white text-lg hover:bg-emerald-600 hover:cursor-pointer mt-4 rounded-lg'>
+          <button type='submit' className='bg-emerald-500 w-4/12 p-2 text-white text-lg
+           hover:bg-emerald-600 hover:cursor-pointer mt-4 rounded-lg'>
             {isRegister ? "Regístrate" : "Ingresar"}
           </button>
         </div>
@@ -99,3 +106,4 @@ const Login = ({ setNavVisiblity, setRuta }) => {
 }
 
 export default Login
+
